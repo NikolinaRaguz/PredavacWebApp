@@ -1,0 +1,102 @@
+﻿@using System.Web.Mvc.Html
+@model IEnumerable<PredavacWebApplication.Models.KolegijPredavacViewModel>
+
+@{
+    ViewBag.Title = "Tražilica";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+
+    <h2>Tražilica</h2>
+
+
+    <p>
+    @using (Html.BeginForm("SearchIndex", "Kolegijs", FormMethod.Get))
+    {
+
+        <div class="form-horizontal">
+            <div class="form-inline">
+                <div class="row">
+                    <div class="form-group">
+                        <label class="col-sm-6 control-label">Odaberi kolegij:</label>
+                        <div class="col-sm-6">
+                            @Html.DropDownList("Naziv", null, "Svi kolegiji", new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="form-group" style="align-content:center">
+                        <label class="col-sm-6 control-label">Prezime predavača:</label>
+                        <div class="col-sm-6">
+
+                            @Html.TextBox("searchString", null, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-12">
+                            <input type="submit" value="Pretraži" class="btn btn-info form-control" />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+
+
+</p>
+
+
+
+    <table class="table table-striped" style="color:midnightblue">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nositelj)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudijskaGod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prezime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tema)
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Naziv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nositelj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudijskaGod)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prezime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tema)
+                </td>
+
+            </tr>
+        }
+
+    </table>

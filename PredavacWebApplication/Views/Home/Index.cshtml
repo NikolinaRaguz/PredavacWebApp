@@ -1,0 +1,144 @@
+﻿@{
+    ViewBag.Title = "Početna stranica";
+}
+<br />
+<br />
+<div class="jumbotron">
+    <br />
+    <br />
+    <div id="mycarousel" class="carousel slide" data-ride="carousel" style="margin-top:-10px">
+        <ol class="carousel-indicators">
+            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#mycarousel" data-slide-to="1"></li>
+            <li data-target="#mycarousel" data-slide-to="2"></li>
+            <li data-target="#mycarousel" data-slide-to="3"></li>
+            <li data-target="#mycarousel" data-slide-to="4"></li>
+            <li data-target="#mycarousel" data-slide-to="5"></li>
+            <li data-target="#mycarousel" data-slide-to="6"></li>
+        </ol>
+
+        <div class="carousel-inner" role="listbox">
+            <div class="item active" align="center">
+                <img src="~/Content/slika/054c8748-196f-449b-c465-e04f634fc248.jpeg" width="600" height="400" />
+                <div class="carousel-caption">
+                </div>
+            </div>
+
+            <div class="item" align="center">
+                <img src="~/Content/slika/13103475_1045723495481808_594197613660887786_n.jpg" width="600" height="400" />
+                <div class="carousel-caption">
+                </div>
+            </div>
+
+            <div class="item" align="center">
+                <img src="~/Content/slika/13055340_1045725212148303_6116360199651222494_n.jpg" width="600" height="400" />
+                <div class="carousel-caption">
+                </div>
+            </div>
+
+            <div class="item" align="center">
+                <img src="~/Content/slika/13083133_1045725008814990_8014669083671771373_n.jpg" width="600" height="400" />
+                <div class="carousel-caption">
+                </div>
+            </div>
+
+            <div class="item" align="center">
+                <img src="~/Content/slika/13103475_1045723495481808_594197613660887786_n.jpg" width="600" height="400" />
+                <div class="carousel-caption">
+                </div>
+            </div>
+
+            <div class="item" align="center">
+                <img src="~/Content/slika/13124450_1045724158815075_7957540489838149730_n.jpg" width="600" height="400" />
+                <div class="carousel-caption">
+                </div>
+            </div>
+
+            <div class="item" align="center">
+                <img src="~/Content/slika/13124882_1045723758815115_5085482104490692124_n.jpg" width="600" height="400" />
+                <div class="carousel-caption">
+                </div>
+            </div>
+
+        </div>
+
+        <a class="left carousel-control" href="#mycarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="right carousel-control" href="#mycarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+
+    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </div>
+<div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+</div>
+    <h1><center>Ekonomski fakultet u Osijeku
+    <br />
+        Gosti predavači na kolegijima</center></h1>
+    <p class="lead">
+</div>
+
+<br />
+<br />
+<br />
+
+    <h2><center>Kolegiji i gosti predavači</center></h2>
+    <p><center>
+    <justify>
+        U web aplikaciji za evidenciju gostiju predavača po kolegijima
+        možemo dodavati, pregledavati, pretraživati i uređivati popis gostiju predavača
+        koji su održali predavanja na pojedinim kolegijima na Ekonomskom fakultetu u Osijeku.
+    </justify></center></p>
+
+<br />
+<br />
+
+
+    <div class="col-md-4">
+        <h2><center>Unos kolegija</center></h2>
+        <p><justify>
+            Ovdje možete unijeti naziv kolegija na kojem je gostovao predavač,
+            te nositelja kolegija i studijsku godinu na kojem se kolegij održava.
+            <br />
+               <center><img src="~/Content/slika/Google-Day-EFOS-1.png" height="200" width="200" /></center>
+        </justify></p><br />
+        <p><center>@Html.ActionLink("Popis Kolegija", "Index", "Kolegijs", null, new { @class = "btn btn-success btn-lg" })</center></p>
+    </div>
+
+<div class="col-md-4">
+    <h2><center>Unos predavača</center></h2>
+    <p>
+        <justify>
+            Unesite ime,prezime,datum i broj studenata koji su nazočili predavanju. <br />
+            <center><img src="~/Content/slika/Rimac-04.png" height="200" width="200" /></center>
+        </justify>
+    </p>
+    <br />
+    <br />
+    <i>Napomena:</i> <br />
+    Kod unosa nadolazećeg predavanja u polje "Broj Prisutnih Studenata" upišite broj 0,
+    a nakon predavanja upišite konačan broj studenata koji su prisustvovali predavanju.
+    </p>
+    <p><center>@Html.ActionLink("Popis predavača", "Index", "Predavacs", null, new { @class = "btn btn-success btn-lg" })</center></p>
+</div>
+
+    <div class="row">
+        <div class="col-md-4">
+        <h2><center>Tražilica</center></h2>
+        <p><justify>
+            Uz pomoć tražilice možete pretraživati predavače koji su gostovali na kolegijima. <br />
+               <center><img src="~/Content/slika/Search-button.png" height="200" width="200" /></center>
+        </justify></p>
+        <p><center>@Html.ActionLink("Tražilica", "SearchIndex", "Kolegijs", null, new { @class = "btn btn-success btn-lg" })</center></p>
+    </div>
+
+</div>

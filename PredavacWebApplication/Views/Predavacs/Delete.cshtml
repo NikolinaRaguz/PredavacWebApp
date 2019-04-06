@@ -1,0 +1,77 @@
+﻿@model PredavacWebApplication.Models.Predavac
+
+@{
+    ViewBag.Title = "Obriši";
+}
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<h2>Obriši</h2>
+
+<h3>Jeste li sigurni?</h3>
+<div>
+    <h4>Predavač</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Kolegij.Naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kolegij.Naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tema)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tema)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrStudent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrStudent)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Obriši" class="btn btn-default" /> |
+            @Html.ActionLink("Povratak na popis predavača", "Index")
+        </div>
+    }
+</div>
